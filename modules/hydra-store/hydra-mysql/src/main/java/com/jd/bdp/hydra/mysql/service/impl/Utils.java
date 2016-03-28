@@ -2,7 +2,7 @@ package com.jd.bdp.hydra.mysql.service.impl;
 
 import com.jd.bdp.hydra.Annotation;
 import com.jd.bdp.hydra.Span;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 

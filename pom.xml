@@ -22,11 +22,22 @@
     <description></description>
     <url></url>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://mvn.d.sohu.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://mvn.d.sohu.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <!-- scm待定 -->
     <scm>
-        <connection>scm:git:https://github.com/jd-bdp/hydra.git</connection>
-        <url>scm:git:https://github.com/jd-bdp/hydra.git</url>
-        <developerConnection>scm:git:https://github.com/jd-bdp/hydra.git</developerConnection>
+        <connection>scm:git:https://github.com/MarsYoung/hydra.git</connection>
+        <url>scm:git:https://github.com/MarsYoung/hydra.git</url>
+        <developerConnection>scm:git:https://github.com/MarsYoung/hydra.git</developerConnection>
     </scm>
 
     <licenses>
@@ -91,23 +102,23 @@
         <fastjson.version>1.1.28</fastjson.version>
         <jsp-api.version>2.1</jsp-api.version>
         <jstl-api.version>1.2</jstl-api.version>
-        <dubbo.version>2.4.8-SNAPSHOT</dubbo.version>
+        <dubbo.version>2.8.4</dubbo.version>
         <validation-api.version>1.0.0.GA</validation-api.version>
         <metamorphosis.version>1.4.3</metamorphosis.version>
         <disruptor.version>2.10.3</disruptor.version>
         <glowworm.version>1.0-SNAPSHOT</glowworm.version>
         <slf4j.version>1.6.4</slf4j.version>
         <log4j.version>1.2.15</log4j.version>
-        <hessian.version>3.2.2</hessian.version>
+        <hessian.version>4.0.38</hessian.version>
         <zkclient.version>0.1</zkclient.version>
         <mybatis.version>3.0.6</mybatis.version>
         <mybatis-spring>1.0.0</mybatis-spring>
         <mysql-connector-java.version>5.1.22</mysql-connector-java.version>
         <google-collections.version>1.0</google-collections.version>
-        <hadoop-common.version>bdp-2.0.0-cdh4.1.1</hadoop-common.version>
-        <hbase.version>bdp-0.92.1-cdh4.1.1</hbase.version>
+        <hadoop-common.version>2.7.2</hadoop-common.version>
+        <hbase.version>1.2.0</hbase.version>
         <commons-configuration.version>1.9</commons-configuration.version>
-        <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
         <druid.version>0.2.17</druid.version>
     </properties>
 
@@ -390,7 +401,12 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.hbase</groupId>
-                <artifactId>hbase</artifactId>
+                <artifactId>hbase-common</artifactId>
+                <version>${hbase.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
                 <version>${hbase.version}</version>
             </dependency>
             <dependency>
@@ -410,9 +426,9 @@
                 <version>${google-collections.version}</version>
             </dependency>
             <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>${commons-lang.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
             <!-- 连接池 -->
             <dependency>
