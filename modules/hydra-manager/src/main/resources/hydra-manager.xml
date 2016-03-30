@@ -11,7 +11,8 @@
     <import resource="classpath*:hydra-manager-db.xml"/>
     <context:property-placeholder location="classpath:hydra-manager.properties"/>
     <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
-    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"/>
+    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"
+                    group="${dubbo.registry.group}" />
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
     <bean id="leaderService" class="com.jd.bdp.hydra.dubbomonitor.provider.impl.LeaderServiceImpl">

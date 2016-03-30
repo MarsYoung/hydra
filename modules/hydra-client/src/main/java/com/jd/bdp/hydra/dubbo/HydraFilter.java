@@ -159,7 +159,7 @@ public class HydraFilter implements Filter {
     /*加载Filter的时候加载hydra配置上下文*/
     static {
         logger.info("Hydra filter is loading hydra-config file...");
-        String resourceName = "classpath*:hydra-config.xml";
+        String resourceName = "classpath*:/spring/hydra-config.xml";
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{
                 resourceName
         });
